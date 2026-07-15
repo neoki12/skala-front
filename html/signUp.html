@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 | SKALA-FRONT</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="signup-container">
+
+        <header class="signup-header">
+            <h2>👤 SKALA-FRONT 회원가입</h2>
+            <p>환영합니다! 원활한 서비스 이용을 위해 정보를 입력해 주세요.</p>
+        </header>
+        
+        <hr>
+
+        <form action="signUpResult.html" method="post" class="signup-form">
+            
+            <fieldset class="form-section">
+                <legend>기본 계정 정보 (필수)</legend>
+                
+                <div class="form-group">
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 영문/숫자">
+                    <button type="button" class="btn-verify">중복확인</button>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="userPw">비밀번호</label>
+                    <input type="password" id="userPw" name="userPw" minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" required placeholder="비밀번호 입력">
+                    <br>
+                    <small class="pw-hint"><strong>※ 필수:</strong> 영문 대문자, 소문자, 숫자를 모두 1개 이상 포함하여 8자 이상 입력해 주세요.</small>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="userPwConfirm">비밀번호 확인</label>
+                    <input type="password" id="userPwConfirm" name="userPwConfirm" required placeholder="비밀번호 재입력">
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="form-section">
+                <legend>개인 정보 (필수)</legend>
+                
+                <div class="form-group">
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" name="userName" required placeholder="실명 입력">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="userPhone">휴대전화</label>
+                    <input type="tel" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-0000-0000" required>
+                    <button type="button" class="btn-verify">인증번호 받기</button>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="userEmail">이메일</label>
+                    <input type="text" id="userEmail" name="userEmail" required placeholder="이메일 아이디">
+                    <span>@</span>
+                    <select name="emailDomain" id="emailDomain" required>
+                        <option value="" disabled selected>선택해주세요</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="kakao.com">kakao.com</option>
+                        <option value="direct">직접 입력</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="userBirth">생년월일</label>
+                    <input type="date" id="userBirth" name="userBirth">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <span>성별</span>
+                    <label><input type="radio" name="gender" value="male"> 남성</label>
+                    <label><input type="radio" name="gender" value="female"> 여성</label>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="form-section">
+                <legend>관심 직무 (선택)</legend>
+                
+                <div class="form-group">
+                    <p>희망 직무 분야 (중복 선택 가능)</p>
+                    <label><input type="checkbox" name="jobField" value="business"> 상경계열 (기획, 인사, 마케팅, 재무 등)</label><br>
+                    <label><input type="checkbox" name="jobField" value="science & engineering"> 이공계열 (IT개발, 연구개발, 엔지니어링 등)</label><br>
+                    <label><input type="checkbox" name="jobField" value="humanities"> 인문계열 (어문, 역사, 철학 등)</label><br>
+                    <label><input type="checkbox" name="jobField" value="society"> 사회계열 (사회, 심히, 행정 등)</label><br>
+                    <label><input type="checkbox" name="jobField" value="arts & PE"> 예체능계열 (디자인, 영상, 스포츠, 예술 등)</label>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="joinPath">가입 경로</label>
+                    <select id="joinPath" name="joinPath">
+                        <option value="" disabled selected>-- 선택해 주세요 --</option>
+                        <option value="search">인터넷 검색</option>
+                        <option value="friend">지인 추천</option>
+                        <option value="sns">SNS 광고</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="intro">한 줄 자기소개</label><br>
+                    <textarea id="intro" name="intro" rows="3" cols="50" placeholder="자신을 자유롭게 표현해 주세요 (최대 200자)" maxlength="200"></textarea>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="form-section terms-section">
+                <legend>약관 동의</legend>
+                <div class="form-group">
+                    <label>
+                        <strong><input type="checkbox" id="agreeAll"> 전체 동의합니다.</strong>
+                    </label>
+                    <hr style="border-top: 1px dashed #ccc;">
+                    <label><input type="checkbox" name="agreement" value="term1" required> (필수) 이용약관 동의</label><br>
+                    <label><input type="checkbox" name="agreement" value="term2" required> (필수) 개인정보 수집 및 이용 동의</label><br>
+                    <label><input type="checkbox" name="agreement" value="term3"> (선택) 마케팅 정보 수신 동의</label>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <div class="submit-group" style="text-align: center;">
+                <button type="submit" class="btn-submit">회원가입 완료</button>
+                <button type="reset" class="btn-reset">다시 작성</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>
