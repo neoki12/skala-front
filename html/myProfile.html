@@ -1,87 +1,170 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-    <Head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> 나의 소개 </title>
-        <h1> ✨ 간단한 자기 소개!  </h1>
-        <p>안녕하세요! 전자공학를 전공한 김현수입니다!<br>
-        저에 대해서 간단하게 소개해드릴게요!</p>
-    </Head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소개 | 김현수</title>
+    <style>
+        /* 화면을 예쁘고 읽기 좋게 만들어주는 CSS 디자인 */
+        body {
+            font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+            background-color: #f4f6f8; /* 눈이 편안한 아주 연한 회색 배경 */
+            color: #333333;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-    <body >
+        /* 내용을 담는 하얀색 메인 카드 */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 최상단 메인 제목 */
+        .intro-title {
+            font-size: 28px;
+            color: #1a202c;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .intro-text {
+            color: #4e5968;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* 각 섹션의 소제목 */
+        h2.section-title {
+            font-size: 20px;
+            color: #191f28;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* 리스트 기본 스타일 없애기 */
+        ul { list-style-type: none; padding-left: 0; }
         
-        <h1>
-            <b>😋 좋아하는 음식</b>
-        </h1>
+        /* 좋아하는 음식 리스트 */
+        li.food-item {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #2d3748;
+        }
+
+        /* 토글(details) 디자인 */
+        details {
+            background-color: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: #3182f6; /* 클릭을 유도하는 파란색 */
+            font-weight: bold;
+            outline: none;
+        }
+
+        details ol {
+            margin-top: 12px;
+            margin-bottom: 0;
+            padding-left: 20px;
+            color: #4e5968;
+        }
+
+        /* 올해 꼭 지킬 일 (체크리스트 디자인) */
+        .todo-list li {
+            background-color: #f2f4f6;
+            margin-bottom: 10px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #333d4b;
+        }
         
+        /* 체크마크 자동 추가 */
+        .todo-list li::before { content: '✅ '; }
 
-        <h2>
-            <ul style="list-style-type: disc;">
-                <li>🍥 라멘</li>
-                <details>
-                    <summary>
-                        자세히 보기
-                    </summary>
-                    <ol type="1">
-                        <li>쇼유라멘</li>
-                        <li>이에케라멘</li>
-                        <li>지로라멘</li>
-                    </ol>
-                </details><br>
+        /* 나를 설명하는 단어들 (dl, dt, dd 디자인) */
+        dt {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b64da;
+            margin-top: 24px;
+        }
 
-                <li>&#x1F372; 국밥</li>
-                <details>
-                    <summary>
-                        자세히 보기
-                    </summary>
-                    <ol type="1">
-                        <li>순대국밥</li>
-                        <li>대전 태평소국밥</li>
-                    </ol>
-                </details><br>
+        dd {
+            margin: 8px 0 0 0;
+            color: #4e5968;
+            background-color: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #3182f6; /* 왼쪽에 파란색 강조 선 */
+        }
+    </style>
+</head>
+<body>
 
-                <li>♨️ 찌개류</li>
-            </ul>
-        </h2>
-        <hr>
+    <div class="container">
+        <h1 class="intro-title">✨ 간단한 자기 소개!</h1>
+        <p class="intro-text">
+            안녕하세요! 전자공학을 전공한 <b>김현수</b>입니다!<br>
+            저에 대해서 간단하게 소개해 드릴게요!
+        </p>
 
-        <h1>
-            <b>✅ 올 해 꼭 지킬 일</b>
-        </h1>
+        <h2 class="section-title">😋 좋아하는 음식</h2>
+        <ul>
+            <li class="food-item">🍥 라멘</li>
+            <details>
+                <summary>자세히 보기</summary>
+                <ol type="1">
+                    <li>쇼유라멘</li>
+                    <li>이에케라멘</li>
+                    <li>지로라멘</li>
+                </ol>
+            </details>
 
-        <h2>
-              <ul style="list-style-type:disc;">
-                <li>8 to 21하기</li>
-                <li>결석하지 않기</li>
-                <li>당일에 배운 내용 복습하기</li>
-                <li>건강 관리하기</li>
-              </ul>  
-        </h2>
-        <hr>
+            <li class="food-item">🍲 국밥</li>
+            <details>
+                <summary>자세히 보기</summary>
+                <ol type="1">
+                    <li>순대국밥</li>
+                    <li>대전 태평소국밥</li>
+                </ol>
+            </details>
 
-        <h1>
-            <b>👨🏻‍🎓 나를 설명하는 단어들</b>
-        </h1>
+            <li class="food-item">♨️ 찌개류</li>
+        </ul>
 
-        <h2>
-            
-                <dl>
-                    <dt>🔥 Challenger
-                        <dd>맨땅에 헤딩하는 것을 두려워하지 않는 강력한 실행력을 가지고 있습니다.</dd>
-                    </dt>
-                    <dt>🤝 Collaborator
-                        <dd>서로 다른 소속이나 다양한 성향의 사람들을 하나의 팀으로 묶어, 공동의 목표를 가장 효율적인 방식으로 달성해 나갑니다.</dd>
-                    </dt>
-                    <dt>🌐 Open-mindedness
-                        <dd>새로운 지식과 가치관을 잘 받아드리며 스펙트럼을 끊임없이 넓혀가는 유연함을 지니고 있습니다.</dd>
-                    </dt>
-                </dl>
-            
-        </h2>
+        <h2 class="section-title">🎯 올해 꼭 지킬 일</h2>
+        <ul class="todo-list">
+            <li>8 to 21 하기</li>
+            <li>결석하지 않기</li>
+            <li>당일에 배운 내용 복습하기</li>
+            <li>건강 관리하기</li>
+        </ul>
 
+        <h2 class="section-title">👨🏻‍🎓 나를 설명하는 단어들</h2>
+        <dl>
+            <dt>🔥 Challenger</dt>
+            <dd>맨땅에 헤딩하는 것을 두려워하지 않는 강력한 실행력을 가지고 있습니다.</dd>
 
-        
-    </body>
+            <dt>🤝 Collaborator</dt>
+            <dd>서로 다른 소속이나 다양한 성향의 사람들을 하나의 팀으로 묶어, 공동의 목표를 가장 효율적인 방식으로 달성해 나갑니다.</dd>
+
+            <dt>🌐 Open-mindedness</dt>
+            <dd>새로운 지식과 가치관을 잘 받아들이며 스펙트럼을 끊임없이 넓혀가는 유연함을 지니고 있습니다.</dd>
+        </dl>
+    </div>
+
+</body>
 </html>

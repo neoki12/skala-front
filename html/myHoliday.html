@@ -1,33 +1,128 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-    <Head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> 나의 휴일 일과 </title>
-        <h1> &#x1F3D6; 나의 휴일 일과 &#x1F3D6; </h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 휴일 일과</title>
+    <style>
+        /* 전체 배경과 폰트 설정 */
+        body {
+            font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+            background-color: #f0f4f8; /* 차분하고 시원한 연한 파란빛 배경 */
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 전체 내용을 감싸는 중앙 정렬 컨테이너 */
+        .container {
+            width: 100%;
+            max-width: 450px; /* 스마트폰 화면처럼 보기 좋은 너비 */
+        }
+
+        /* 메인 타이틀 디자인 */
+        .header-title {
+            text-align: center;
+            font-size: 26px;
+            color: #1a202c;
+            margin-bottom: 30px;
+        }
+
+        /* 아침, 오후, 저녁을 나누는 카드 디자인 */
+        .routine-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+        }
+
+        /* 각 섹션의 소제목 (아침, 오후, 저녁) */
+        .routine-card h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #2b6cb0; /* 눈에 띄는 파란색 계열 */
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        /* 리스트 기호(점) 없애고 정렬하기 */
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 각 시간별 일정 한 줄 디자인 */
+        .schedule-list li {
+            font-size: 16px;
+            margin-bottom: 14px;
+            display: flex; /* 이모지, 시간, 텍스트를 가로로 예쁘게 정렬 */
+            align-items: center;
+        }
+
+        .schedule-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 시간 글씨(<b>) 강조 디자인 */
+        .schedule-list b {
+            color: #dd6b20; /* 쨍한 오렌지색으로 시간 강조 */
+            margin: 0 12px 0 8px; /* 양옆 여백 */
+            font-size: 17px;
+            min-width: 50px; /* 시간이 차지하는 칸을 고정해서 글씨가 일렬로 맞게 함 */
+        }
+
+        /* <mark> 태그 (형광펜) 예쁘게 다듬기 */
+        mark {
+            background-color: #fefcbf; /* 부드러운 노란색 */
+            color: #975a16;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 1. 메인 타이틀 -->
+        <h1 class="header-title">&#x1F3D6; 나의 휴일 일과 &#x1F3D6;</h1>
         
-    </Head>
-<hr>
-    <body>
-        <h2> &#x1F6CF; 여유로운 아침</h2>
-        <p> &#x1F6BF; <b>10:00</b> - 기상 및 세면 <br>
-        &#x1F96F; <b>11:00</b> - 아점 <br>
-        &#x1F9F3; <b>12:00</b> - 외출 준비</p><br>
+        <!-- 2. 여유로운 아침 카드 -->
+        <section class="routine-card">
+            <h2>&#x1F6CF; 여유로운 아침</h2>
+            <ul class="schedule-list">
+                <li>&#x1F6BF; <b>10:00</b> - 기상 및 세면</li>
+                <li>&#x1F96F; <b>11:00</b> - 아점</li>
+                <li>&#x1F9F3; <b>12:00</b> - 외출 준비</li>
+            </ul>
+        </section>
 
-        <h2> ☀️ 오후 </h2>
-        <p> 🥤 <b>13:00</b> - <mark>카페 방문</mark> <br>
-        🧑🏻‍💻 <b>13:30</b> - <mark> HTML 및 CSS 복습</mark> <br>
-        🚶 <b>17:00</b> - 산책</p><br>    
-        
-        <h2> 🌃 저녁</h2>
-        <p> 🍽️ <b>18:00</b> - 저녁 식사 <br>
-        ▶️ <b>19:00</b> - Youtube 시청 <br>
-        🧺 <b>21:00</b> - 빨래 <br>
-        💤 <b>23:00</b> - 취침 </p><br>
+        <!-- 3. 오후 카드 -->
+        <section class="routine-card">
+            <h2>☀️ 오후</h2>
+            <ul class="schedule-list">
+                <li>🥤 <b>13:00</b> - <mark>카페 방문</mark></li>
+                <li>🧑🏻‍💻 <b>13:30</b> - <mark>HTML 및 CSS 복습</mark></li>
+                <li>🚶 <b>17:00</b> - 산책</li>
+            </ul>
+        </section>
 
-    </body>
-
-
-
+        <!-- 4. 저녁 카드 -->
+        <section class="routine-card">
+            <h2>🌃 저녁</h2>
+            <ul class="schedule-list">
+                <li>🍽️ <b>18:00</b> - 저녁 식사</li>
+                <li>▶️ <b>19:00</b> - Youtube 시청</li>
+                <li>🧺 <b>21:00</b> - 빨래</li>
+                <li>💤 <b>23:00</b> - 취침</li>
+            </ul>
+        </section>
+    </div>
+</body>
 </html>
