@@ -120,6 +120,21 @@ main section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
+.photo-container {
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.travel-photo {
+    width: 70%;            
+    height: auto;
+    object-fit: cover;     
+    border-radius: 8px;
+}
+
 main section h2 {
     margin-top: 0;
     margin-bottom: 15px;
@@ -327,32 +342,36 @@ dd {
     max-width: 450px;
 }
 
-.schedule-list {
-    list-style: none;
-    padding: 0;
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.schedule-list li {
-    margin: 12px 0;
-    display: flex;
-    align-items: center;
+.schedule-table th, .schedule-table td {
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.schedule-list input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-right: 12px;
-    cursor: pointer;
+.schedule-table thead {
+    background-color: #2f3640;
+    color: white;
 }
 
-.schedule-list input[type="checkbox"]:checked + label span {
-    text-decoration: line-through;
-    color: #a0aec0;
-    opacity: 0.7;
+.sun { color: #e84118; font-weight: bold; }
+.sat { color: #0097e6; font-weight: bold; }
+
+.lunch-time {
+    background-color: #f1f2f6;
+    font-weight: bold;
+    color: #57606f;
 }
 
-.schedule-list label {
-    cursor: pointer;
+.schedule-table tbody tr:hover {
+    background-color: #fcfcfc;
 }
 
 .header-title {
@@ -822,4 +841,37 @@ button {
     margin: 0;
     font-weight: bold;
     color: #333d4b;
+}
+
+.button-wrapper {
+    display: flex;          
+    justify-content: center;
+    margin-top: 50px;      
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background-color: #808080;
+}
+
+.schedule-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    text-decoration-thickness: 5px; 
+    color: #a0aec0;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.schedule-list label span {
+    color: inherit; 
 }

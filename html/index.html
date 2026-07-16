@@ -12,31 +12,31 @@
         
         <header class="hub-header">
             <div class="header-text">
-                 <h1>👋 환영 인사</h1>
-                 <p>✨ 현수의 SKALA 허브에 오신 것을 환영합니다!</p>
+                 <h1>🛠️ 현수의 작업실(Studio)</h1>
+                 <p>SKALA에서 만들어가는 프로젝트와 실험들을 기록하는 공간입니다.</p>
             </div>
         </header>
 
         <nav class="nav-section">
             <h2>🔗 바로가기</h2>
             <div class="button-group">
-                <a href="myProfile.html" target="_blank" class="btn-link">
+                <a href="myProfile.html" class="btn-link">
                     <span>👤 나의 프로필</span>
                     <span class="btn-arrow">➔</span>
                 </a>
-                <a href="myClass.html" target="_blank" class="btn-link">
+                <a href="myClass.html" class="btn-link">
                     <span>📅 나의 수업</span>
                     <span class="btn-arrow">➔</span>
                 </a>
-                <a href="myHoliday.html" target="_blank" class="btn-link">
+                <a href="myHoliday.html"class="btn-link">
                     <span>🏖️ 나의 휴일</span>
                     <span class="btn-arrow">➔</span>
                 </a>
-                <a href="myTrip.html" target="_blank" class="btn-link">
+                <a href="myTrip.html" class="btn-link">
                     <span>✈️ 나의 여행 일기</span>
                     <span class="btn-arrow">➔</span>
                 </a>
-                <a href="signUp.html" target="_blank" class="btn-link">
+                <a href="signUp.html" class="btn-link">
                     <span>📝 회원 가입</span>
                     <span class="btn-arrow">➔</span>
                 </a>
@@ -59,36 +59,50 @@
                 <section>
                     <h2>✈️ 나의 최고의 여행: 교토 (Kyoto)</h2>
                     <p>제가 다녀온 최고의 여행지는 일본의 옛 수도, <b>교토</b>입니다. <br>고즈넉한 풍경과 전통의 아름다움을 온전히 느낄 수 있는 곳이었습니다.</p>
+                        <div class="travel-box">
+                            <div class="photo-container">
+                                <img src="../media/아라시야마2.jpg" alt="여행 사진" class="travel-photo">
+                            </div>
+                        </div>
                     <ul>
+                        <li><b>🎋 아라시야마 치쿠린:</b> 하늘 높이 뻗은 푸른 대나무 숲길을 걸으며 마음의 평화를 찾을 수 있는 최고의 힐링 명소입니다.</li>
                         <li><b>⛩️ 후시미 이나리 신사:</b> 끝없이 이어지는 붉은빛 도리이 터널이 신비롭고 웅장한 곳입니다.</li>
                         <li><b>🏯 기요미즈데라:</b> 절벽 위에 세워진 거대한 목조 사찰로, 탁 트인 교토 시내 전경을 내려다볼 수 있습니다.</li>
-                        <li><b>🎋 아라시야마 치쿠린:</b> 하늘 높이 뻗은 푸른 대나무 숲길을 걸으며 마음의 평화를 찾을 수 있는 최고의 힐링 명소입니다.</li>
                     </ul>
                 </section>
             </main>
 
             <div class="sidebar-wrapper">
-                
+
+                <aside class="game-aside" style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+                    <div id="clock-container" style="margin-bottom: 20px;">
+                        <div id="today-date" style="font-size: 14px; color: #6b7684;"></div>
+                        <div id="live-clock" style="font-size: 40px; font-weight: bold; color: #333;">00:00:00</div>
+                    </div> 
+                </aside>
+
                 <aside>
                     <h2>👤 간단 프로필</h2>
                     <ul>
-                        <li><b>이름:</b> 김현수 🙋‍♂️</li>
-                        <li><b>관심 분야:</b> 반도체, 데이터 분석, 프론트엔드 개발 📊</li>
-                        <li><b>현재 위치:</b> 광주 SKALA 📍</li>
-                        <li><b>이메일:</b> <a href="mailto:neoki12@naver.com">neoki12@naver.com</a> 📧</li>
+                        <li><b>이름:</b> 김현수 </li> 
+                        <li><b>전공:</b> 전자공학과 </li>
+                        <li><b>관심 분야:</b> 반도체 소자, 데이터 분석, 프론트엔드 개발 </li>
+                        <li><b>현재 위치:</b> 광주 SKALA </li>
+                        <li><b>이메일:</b> <a href="mailto:neoki12@naver.com">neoki12@naver.com</a> </li>
                     </ul>
                 </aside>
 
                 <aside class="weather-aside" style="text-align: center; padding: 20px;">
                     <h2>🌍 실시간 날씨 정보</h2>
                     
-                    <select id="city-select" class="game-input">
-                        <option value="none">도시를 선택하세요</option>
-                        <option value="37.56,126.97">서울</option>
-                        <option value="35.17,129.07">부산</option>
-                        <option value="35.15,126.85">광주</option>
-                        <option value="33.49,126.53">제주</option>
-                    </select>
+                        <select id="city-select" onchange="handleCityChange()" class="game-input" style="width: 100%; margin-bottom: 15px; padding: 5px;">
+                            <option value="Seoul">서울</option>
+                            <option value="Gwangju">광주</option>
+                            <option value="London">런던</option>
+                            <option value="New York">뉴욕</option>
+                            <option value="Tokyo">도쿄</option>
+                            <option value="add-new" style="font-weight: bold; color: blue;">+ 도시 추가하기</option>
+                        </select>
 
                     <div id="weather-box" style="margin-top: 15px;">
                         <p style="color: #6b7684; font-size: 14px;">도시를 선택하면 날씨 정보가 나타납니다.</p>
@@ -105,7 +119,10 @@
                     </select>
                     <p id="game-status" style="font-size: 13px; color: #6b7684;">시작 버튼을 눌러주세요!</p>                   
                     <button id="start-btn" onclick="playGame()" class="btn-game">업다운 게임 시작</button>                   
-                    <hr>                   
+                    <hr>  
+                    <button onclick="window.location.href='brick.html'" class="btn-game" style="margin-top: 10px; background-color: #e53e3e;">🧱 벽돌 깨기 시작</button>
+                    <p id="game-status" style="font-size: 13px; color: #6b7684;">조작법: ← / → 방향키로 패들을 움직이세요!</p>
+                    <hr>                 
                     <button onclick="checkGrade()" class="btn-game" style="margin-top: 10px; background-color: #3182f6;">📊 성적 계산기 바로가기</button>                       
                     
                     <div id="game-controls" style="display: none;"></div>
@@ -121,8 +138,11 @@
 
     </div>
 
+    <script src="../script/weather.js" defer></script>
     <script src="../script/upDown.js"></script>
+    <script src="brick.js"></script>
     <script src="../script/grade.js"></script>
     <script src="../script/bag.js"></script>
+    <script src="../script/time.js"></script>
 </body>
 </html>

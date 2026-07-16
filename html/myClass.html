@@ -1,93 +1,84 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-    <Head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> 강의 시간표 </title>
-    </Head>
-
-    <body>
-        <div class="container">
-            <h1> 🗓️ 나의 강의 시간표  </h1>
-            <table border="1" cellpadding="7" cellspacing="0" width="100%">
-                <thead>
-                    <tr bgcolor="#f0f8ff" align="center">
-                        <th>시간</th>
-                        <th><font color="red">일요일</font></th>
-                        <th><font color="black">월요일</font></th>
-                        <th><font color="black">화요일</font></th>
-                        <th><font color="black">수요일</font></th>
-                        <th><font color="black">목요일</font></th>
-                        <th><font color="black">금요일</font></th>
-                        <th><font color="blue">토요일</font></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="center">09:00 - 10:00</td>
-                        <td rowspan="3" align="center"><font color="red">늦잠 및 휴식 😴</font></td>
-                        <td rowspan="2" align="center"><font color="black">데이터 분석을 위한<br>Python 이해 🐍</font></td>
-                        <td rowspan="2" align="center"><font color="black">데이터 분석을 위한<br>Python 이해 (심화) 🐍</font></td>
-                        <td rowspan="2" align="center"><font color="black">스마트 데이터<br>이해 및 활용 📊</font></td>
-                        <td rowspan="2" align="center"><font color="black">스마트 데이터<br>이해 및 활용 (사례) 📊</font></td>
-                        <td rowspan="2" align="center"><font color="black">스마트 데이터<br>이해 및 활용 (결과) 📊</font></td>
-                        <td rowspan="3" align="center"><font color="blue">주간 복습 및<br>개인 학습 📚</font></td>
-                    </tr>
-                    <tr>
-                        <td align="center">10:00 - 11:00</td>
-                    </tr>
-                    <tr>
-                        <td align="center">11:00 - 12:00</td>
-                        <td align="center"><font color="black">Python 기초 문법 실습 💻</font></td>
-                        <td align="center"><font color="black">Python 시각화 실습 📈</font></td>
-                        <td align="center"><font color="black">스마트 데이터 수집 실습 🌐</font></td>
-                        <td align="center"><font color="black">빅데이터 트렌드 조사 🔍</font></td>
-                        <td align="center"><font color="black">데이터 인사이트 도출 실습 💡</font></td>
-                    </tr>
-                    
-                    <tr bgcolor="#f9f9f9">
-                        <td align="center">12:00 - 13:00</td>
-                        <td colspan="7" align="center">🍱 점 심 시 간 🍱</td>
-                    </tr>
-                    
-                    <tr>
-                        <td align="center">13:00 - 14:00</td>
-                        <td rowspan="2" align="center"><font color="red">독서 및 자유 시간 ☕</font></td>
-                        <td rowspan="2" align="center"><font color="black">데이터 전처리<br>기초 실습 🛠️</font></td>
-                        <td rowspan="3" align="center"><font color="black">미니 프로젝트<br>(데이터 분석) 🚀</font></td>
-                        <td rowspan="2" align="center"><font color="black">공공 데이터 API 활용 🔗</font></td>
-                        <td rowspan="3" align="center"><font color="black">스마트 데이터<br>분석 모델링 기초 🧠</font></td>
-                        <td rowspan="2" align="center"><font color="black">팀별 최종<br>실습 프로젝트 👥</font></td>
-                        <td rowspan="3" align="center"><font color="blue">취미 생활<br>(영화/게임) 🎮</font></td>
-                    </tr>
-                    <tr>
-                        <td align="center">14:00 - 15:00</td>
-                    </tr>
-                    <tr>
-                        <td align="center">15:00 - 16:00</td>
-                        <td rowspan="3" align="center"><font color="red">다음 주 강의 예습 📖</font></td>
-                        <td rowspan="2" align="center"><font color="black">데이터 분석 라이브러리<br>(Pandas) 활용 🐼</font></td>
-                        <td rowspan="3" align="center"><font color="black">데이터 정제 및<br>가공 실습 🧹</font></td>
-                        <td rowspan="2" align="center"><font color="black">실습 프로젝트 발표 🗣️</font></td>
-                    </tr>
-                    <tr>
-                        <td align="center">16:00 - 17:00</td>
-                        <td rowspan="2" align="center"><font color="black">코드 리뷰 및 피드백 💬</font></td>
-                        <td rowspan="2" align="center"><font color="black">실습 결과 발표 준비 📝</font></td>
-                        <td rowspan="2" align="center"><font color="blue">가벼운 운동 및 산책 🚶</font></td>
-                    </tr>
-                    <tr>
-                        <td align="center">17:00 - 18:00</td>
-                        <td align="center"><font color="black">일일 회고 📝</font></td>
-                        <td align="center"><font color="black">주간 회고 및 마무리 🏁</font></td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-
-
-        </div>
-    </body>
-</html> 
+<head>
+    <meta charset="UTF-8">
+    <title>강의 시간표</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🗓️ 나의 강의 시간표</h1>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th class="sun">일요일</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                    <th class="sat">토요일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td rowspan="3" class="sun">늦잠 및 휴식 😴</td>
+                    <td rowspan="2">데이터 분석을 위한<br>Python 이해 </td>
+                    <td rowspan="2">데이터 분석을 위한<br>Python 이해 (심화) </td>
+                    <td rowspan="2">스마트 데이터<br>이해 및 활용 📊</td>
+                    <td rowspan="2">스마트 데이터<br>이해 및 활용 (사례) 📊</td>
+                    <td rowspan="2">스마트 데이터<br>이해 및 활용 (결과) 📊</td>
+                    <td rowspan="3" class="sat">주간 복습 및<br>개인 학습 📚</td>
+                </tr>
+                <tr><td>10:00 - 11:00</td></tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>Python 기초 문법 실습 💻</td>
+                    <td>Python 시각화 실습 📈</td>
+                    <td>스마트 데이터 수집 실습 🌐</td>
+                    <td>빅데이터 트렌드 조사 🔍</td>
+                    <td>데이터 인사이트 도출 실습 💡</td>
+                </tr>
+                <tr class="lunch-time">
+                    <td>12:00 - 13:00</td>
+                    <td colspan="7">🍱 점 심 시 간 🍱</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 14:00</td>
+                    <td rowspan="2" class="sun">독서 및 자유 시간 ☕</td>
+                    <td rowspan="2">데이터 전처리<br>기초 실습 🛠️</td>
+                    <td rowspan="3">미니 프로젝트<br>(데이터 분석) 🚀</td>
+                    <td rowspan="2">공공 데이터 API 활용 🔗</td>
+                    <td rowspan="3">스마트 데이터<br>분석 모델링 기초 🧠</td>
+                    <td rowspan="2">팀별 최종<br>실습 프로젝트 👥</td>
+                    <td rowspan="3" class="sat">취미 생활<br>(영화/게임) 🎮</td>
+                </tr>
+                <tr><td>14:00 - 15:00</td></tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td rowspan="3" class="sun">다음 주 강의 예습 📖</td>
+                    <td rowspan="2">데이터 분석 라이브러리<br>(Pandas) 활용 🐼</td>
+                    <td rowspan="3">데이터 정제 및<br>가공 실습 🧹</td>
+                    <td rowspan="2">실습 프로젝트 발표 🗣️</td>
+                </tr>
+                <tr>
+                    <td>16:00 - 17:00</td>
+                    <td rowspan="2">코드 리뷰 및 피드백 💬</td>
+                    <td rowspan="2">실습 결과 발표 준비 📝</td>
+                    <td rowspan="2" class="sat">가벼운 운동 및 산책 🚶</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:00</td>
+                    <td>일일 회고 📝</td>
+                    <td>주간 회고 및 마무리 🏁</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+    <div class="button-wrapper">
+        <a href="index.html" class="back-btn">⬅️ 메인으로 돌아가기</a>
+    </div>
+</html>
