@@ -76,6 +76,46 @@
                 </div>
             </fieldset>
 
+            <fieldset class="form-section">
+                <legend>관심 분야 및 소개 (선택)</legend>
+                    <div class="form-group">
+                        <label>희망 직무 분야 (중복 가능)</label>
+                            <div style="margin-top: 10px; line-height: 1.8;">
+                                <label><input type="checkbox" name="jobField" value="business"> 상경계열 (기획, 인사, 마케팅, 재무 등)</label><br>
+                                <label><input type="checkbox" name="jobField" value="science"> 이공계열 (IT개발, 연구개발, 엔지니어링 등)</label><br>
+                                <label><input type="checkbox" name="jobField" value="humanities"> 인문계열 (어문, 역사, 철학 등)</label><br>
+                                <label><input type="checkbox" name="jobField" value="society"> 사회계열 (사회, 심리, 행정 등)</label><br>
+                                <label><input type="checkbox" name="jobField" value="arts"> 예체능계열 (디자인, 영상, 스포츠, 예술 등)</label>
+                            </div>
+                    </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="joinPath">가입 경로</label>
+                    <select id="joinPath" name="joinPath">
+                    <option value="" disabled selected>-- 선택해 주세요 --</option>
+                    <option value="search">인터넷 검색</option>
+                    <option value="friend">지인 추천</option>
+                    <option value="sns">SNS 광고</option>
+                    <option value="etc">기타</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="intro" style="width: 100%;">한 줄 자기소개</label>
+                    <textarea id="intro" name="intro" rows="3" placeholder="자신을 자유롭게 표현해 주세요 (최대 200자)" maxlength="200"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>약관 동의</legend>
+                <div class="form-group">
+                    <label><strong><input type="checkbox" id="agreeAll"> 전체 동의합니다.</strong></label>
+                    <hr style="border-top: 1px dashed #cbd5e0; margin: 10px 0;">
+                    <div class="checkbox-list">
+                        <label><input type="checkbox" name="agreement" value="term1" required> (필수) 이용약관 동의</label><br>
+                        <label><input type="checkbox" name="agreement" value="term2" required> (필수) 개인정보 수집 및 이용 동의</label><br>
+                        <label><input type="checkbox" name="agreement" value="term3"> (선택) 마케팅 정보 수신 동의</label><br>
+                    </div>
+                </div>
+            </fieldset>
             <div class="submit-group">
                 <button type="submit" class="btn-submit">회원가입 완료</button>
                 <button type="reset" class="btn-reset">다시 작성</button>
