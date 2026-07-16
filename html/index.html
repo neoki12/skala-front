@@ -15,44 +15,63 @@
             <p>✨ 현수의 스칼라 허브에 오신 것을 환영합니다!</p>
         </header>
 
-        <nav>
+        <nav class="nav-section">
             <h2>🔗 바로가기</h2>
-            <ul>
-                <li><a href="myProfile.html" target="_blank">👤 나의 프로필 </a></li>
-                <li><a href="myClass.html" target="_blank">📅 나의 수업 </a></li>
-                <li><a href="myHoliday.html" target="_blank">🏖️ 나의 휴일 </a></li>
-                <li><a href="myTrip.html" target="_blank">✈️ 나의 여행 일기 </a></li>
-                <li><a href="signUp.html" target="_blank">📝 회원 가입 </a></li>
-            </ul>
+            <div class="button-group">
+                <a href="myProfile.html" target="_blank" class="btn-link">
+                    <span>👤 나의 프로필</span>
+                    <span class="btn-arrow">➔</span>
+                </a>
+                <a href="myClass.html" target="_blank" class="btn-link">
+                    <span>📅 나의 수업</span>
+                    <span class="btn-arrow">➔</span>
+                </a>
+                <a href="myHoliday.html" target="_blank" class="btn-link">
+                    <span>🏖️ 나의 휴일</span>
+                    <span class="btn-arrow">➔</span>
+                </a>
+                <a href="myTrip.html" target="_blank" class="btn-link">
+                    <span>✈️ 나의 여행 일기</span>
+                    <span class="btn-arrow">➔</span>
+                </a>
+                <a href="signUp.html" target="_blank" class="btn-link">
+                    <span>📝 회원 가입</span>
+                    <span class="btn-arrow">➔</span>
+                </a>
+            </div>
         </nav>
 
-        <main>
-            <section>
-                <h2>📰 최근 소식 및 학습 기록</h2>
-                <p>오늘의 학습: HTML의 기본 구조를 잡고 시맨틱 태그(nav, main, aside)를 직접 적용해 보고 있습니다. 💻</p>
-                <p>앞으로 이곳에 데이터 분석 과정과 프론트엔드 학습 기록을 하나씩 채워나갈 예정입니다! 🚀</p>
-            </section>
+        <div class="content-wrapper">
+            
+            <main>
+                <section>
+                    <h2>📰 최근 소식 및 학습 기록</h2>
+                    <p>오늘의 학습: HTML의 기본 구조를 잡고 시맨틱 태그(nav, main, aside)를 직접 적용해 보고 있습니다. 💻</p>
+                    <p>앞으로 이곳에 데이터 분석 과정과 프론트엔드 학습 기록을 하나씩 채워나갈 예정입니다! 🚀</p>
+                </section>
 
-            <section>
-                <h2>✈️ 나만의 최고의 여행: 교토 (Kyoto)</h2>
-                <p>제가 다녀온 최고의 여행지는 일본의 옛 수도, <b>교토</b>입니다. <br>고즈넉한 풍경과 전통의 아름다움을 온전히 느낄 수 있는 곳이었습니다.</p>
+                <section>
+                    <h2>✈️ 나만의 최고의 여행: 교토 (Kyoto)</h2>
+                    <p>제가 다녀온 최고의 여행지는 일본의 옛 수도, <b>교토</b>입니다. <br>고즈넉한 풍경과 전통의 아름다움을 온전히 느낄 수 있는 곳이었습니다.</p>
+                    <ul>
+                        <li><b>⛩️ 후시미 이나리 신사:</b> 끝없이 이어지는 붉은빛 도리이 터널이 신비롭고 웅장한 곳입니다.</li>
+                        <li><b>🏯 기요미즈데라:</b> 절벽 위에 세워진 거대한 목조 사찰로, 탁 트인 교토 시내 전경을 내려다볼 수 있습니다.</li>
+                        <li><b>🎋 아라시야마 치쿠린:</b> 하늘 높이 뻗은 푸른 대나무 숲길을 걸으며 마음의 평화를 찾을 수 있는 최고의 힐링 명소입니다.</li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside>
+                <h2>👤 간단 프로필</h2>
                 <ul>
-                    <li><b>⛩️ 후시미 이나리 신사:</b> 끝없이 이어지는 붉은빛 도리이 터널이 신비롭고 웅장한 곳입니다.</li>
-                    <li><b>🏯 기요미즈데라:</b> 절벽 위에 세워진 거대한 목조 사찰로, 탁 트인 교토 시내 전경을 내려다볼 수 있습니다.</li>
-                    <li><b>🎋 아라시야마 치쿠린:</b> 하늘 높이 뻗은 푸른 대나무 숲길을 걸으며 마음의 평화를 찾을 수 있는 최고의 힐링 명소입니다.</li>
+                    <li><b>이름:</b> 김현수 🙋‍♂️</li>
+                    <li><b>관심 분야:</b> 데이터 분석, 프론트엔드 개발 📊</li>
+                    <li><b>현재 위치:</b> 광주 SKALA 📍</li>
+                    <li><b>이메일:</b> <a href="mailto:neoki12@naver.com">neoki12@naver.com</a> 📧</li>
                 </ul>
-            </section>
-        </main>
+            </aside>
 
-        <aside>
-            <h2>👤 간단 프로필</h2>
-            <ul>
-                <li><b>이름:</b> 김현수 🙋‍♂️</li>
-                <li><b>관심 분야:</b> 데이터 분석, 프론트엔드 개발 📊</li>
-                <li><b>현재 위치:</b> 광주 SKALA 📍</li>
-                <li><b>이메일:</b> <a href="mailto:neoki12@naver.com">neoki12@naver.com</a> 📧</li>
-            </ul>
-        </aside>
+        </div>
 
     </div>
 </body>

@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>현수의 일본 여행기</title>
     <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .attractions-grid .trip-card {
+            margin: 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .attractions-grid img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .attractions-grid .double-img-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .attractions-grid .double-img-box img {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
     
@@ -25,45 +60,51 @@
                 
                 <p class="trip-card">
                     <img src="../media/글리코상.jpg" alt="오사카 글리코상">
-                    <b>오사카 글리코상</b><br>도톤보리의 화려한 네온사인 아래 필수 포토존!
+                    <br><b>오사카 글리코상</b><br>도톤보리의 화려한 네온사인 아래 필수 포토존!
                 </p>
                 
                 <p class="trip-card">
                     <img src="../media/츠텐카쿠.jpg" alt="오사카 츠텐카쿠">
-                    <b>오사카 츠텐카쿠</b><br>신세카이 거리의 매력적인 레트로 랜드마크
+                    <br><b>오사카 츠텐카쿠</b><br>신세카이 거리의 매력적인 레트로 랜드마크
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/Kyoto Tower.jpg" alt="교토타워">
-                    <b>교토 타워</b><br>교토역 앞을 든든하게 지키는 랜드마크
+                    <br><b>교토 타워</b><br>교토역 앞을 든든하게 지키는 랜드마크
                 </p>
                 
                 <p class="trip-card">
                     <img src="../media/금각사.jpg" alt="교토 금각사">
-                    <b>교토 금각사</b><br>호수 위에 금빛으로 찬란하게 빛나는 사찰
+                    <br><b>교토 금각사</b><br>호수 위에 금빛으로 찬란하게 빛나는 사찰
                 </p>
                 
                 <p class="trip-card">
                     <span class="double-img-box">
                         <img src="../media/아라시야마1.jpg" alt="교토 아라시야마">
-                        <img src="../media/아라시야마2.jpg" alt="교토 아라시야마">
                     </span>
                     <b>교토 아라시야마</b><br>바람결에 흔들리는 시원하고 청량한 대나무 숲길
+                </p>
+
+                <p class="trip-card">
+                    <span class="double-img-box">
+                        <img src="../media/아라시야마2.jpg" alt="교토 아라시야마">
+                    </span>
+                    <b>교토 아라시야마</b><br>교토 아라시야마 두 번째 사진
                 </p>
                 
                 <p class="trip-card">
                     <img src="../media/텐류지.jpg" alt="교토 텐류지">
-                    <b>교토 텐류지</b><br>아라시야마의 아름답고 고즈넉한 정원
+                    <br><b>교토 텐류지</b><br>아라시야마의 아름답고 고즈넉한 정원
                 </p>
                 
                 <p class="trip-card">
                     <img src="../media/여우신사.jpg" alt="교토 여우신사">
-                    <b>교토 여우신사 (후시미 이나리)</b><br>붉은 도리이가 끝없이 이어지는 신비로운 길
+                    <br><b>교토 여우신사 (후시미 이나리)</b><br>붉은 도리이가 끝없이 이어지는 신비로운 길
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/Tokyo_Tower.jpg" alt="도쿄 타워">
-                    <b>도쿄 타워</b><br>붉게 빛나는 도쿄의 낭만적인 상징
+                    <br><b>도쿄 타워</b><br>붉게 빛나는 도쿄의 낭만적인 상징
                 </p>
                 
             </div>
@@ -75,35 +116,41 @@
                 
                 <p class="trip-card">
                     <img src="../media/돈카츠.jpg" alt="돈카츠">
-                    <b>교토 특등심 돈카츠</b><br>육즙이 가득한 두툼한 고기와 바삭한 튀김옷의 환상적인 조화
+                    <br><b>교토 특등심 돈카츠</b><br>육즙이 가득한 두툼한 고기와 바삭한 튀김옷의 환상적인 조화
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/옴니버스커피.jpg" alt="옴니버스 커피">
-                    <b>시부야 옴니버스 커피</b><br>감각적인 인테리어 속에서 즐기는 향긋하고 깊은 커피 한 잔 ☕
+                    <br><b>시부야 옴니버스 커피</b><br>감각적인 인테리어 속에서 즐기는 향긋하고 깊은 커피 한 잔 ☕
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/아라비카커피.jpg" alt="아라비카 커피">
-                    <b>교토 아라비카 커피</b><br>교토에서 꼭 맛봐야 할 고소한 교토라떼의 풍미
+                    <br><b>교토 아라비카 커피</b><br>교토에서 꼭 맛봐야 할 고소한 교토라떼의 풍미
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/텐동.jpg" alt="텐동">
-                    <b>시부야 텐도라 텐동 </b><br>단짠 소스가 스며든 밥 위에 갓 튀겨낸 튀김
+                    <br><b>시부야 텐도라 텐동 </b><br>단짠 소스가 스며든 밥 위에 갓 튀겨낸 튀김
                 </p>
 
                 <p class="trip-card">
                     <img src="../media/우설.jpg" alt="우설 구이">
-                    <b>우설 </b><br>입안에서 녹는 부드러움과 쫄깃한 식감이 매력적
+                    <br><b>우설 </b><br>입안에서 녹는 부드러움과 쫄깃한 식감이 매력적
                 </p>
 
                 <p class="trip-card">
                     <span class="double-img-box">
                         <img src="../media/소바1.jpg" alt="소바">
+                    </span>
+                    <br><b>교토 아라시야마 요시무라 소바</b><br>깔끔한 쯔유 육수에 쫄깃한 메밀면이 어우러진 시원한 맛
+                </p>
+
+                <p class="trip-card">
+                    <span class="double-img-box">
                         <img src="../media/소바2.jpg" alt="소바">
                     </span>
-                    <b>교토 아라시야마 요시무라 소바</b><br>깔끔한 쯔유 육수에 쫄깃한 메밀면이 어우러진 시원한 맛
+                    <br><b>교토 아라시야마 요시무라 소바</b><br>교토 아라시야마 요시무라 소바의 두 번째 사진
                 </p>
 
             </div>
@@ -116,3 +163,7 @@
                 Your browser does not support the video tag.
             </video>
             <p><b>일본 3대 축제 '기온 마츠리' 🏮</b><br>교토의 여름을 뜨겁게 달구는 화려하고 웅장한 축제 현장!</p>
+        </section> 
+    </div> 
+</body> 
+</html>
