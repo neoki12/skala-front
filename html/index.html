@@ -83,20 +83,16 @@
                         <option value="100">난이도: 1 ~ 100</option>
                         <option value="1000">난이도: 1 ~ 1000</option>
                     </select>
-
-                    <p id="game-status" style="font-size: 13px; color: #6b7684;">시작 버튼을 눌러주세요!</p>
+                    <p id="game-status" style="font-size: 13px; color: #6b7684;">시작 버튼을 눌러주세요!</p>                   
+                    <button id="start-btn" onclick="playGame()" class="btn-game">업다운 게임 시작</button>                   
+                    <hr>                   
+                    <button onclick="checkGrade()" class="btn-game" style="margin-top: 10px; background-color: #3182f6;">📊 성적 계산기 바로가기</button>                       
                     
-                    <button id="start-btn" onclick="playGame()" class="btn-game">업다운 게임 시작</button>
-                    
-                    <hr>
-                    
-                    <button onclick="checkGrade()" class="btn-game" style="margin-top: 10px; background-color: #3182f6;">📊 성적 계산기 바로가기</button>
-                        
                     <div id="game-controls" style="display: none;"></div>
 
                     <hr>
+                    <button onclick="showMyBag()" class="btn-game" style="margin-top: 10px; background-color: #95ee00;">🎒 내 가방 보기</button>
 
-                    
                 </aside>
 
             </div>
@@ -107,5 +103,6 @@
 
     <script src="../script/upDown.js"></script>
     <script src="../script/grade.js"></script>
+    <script src="../script/bag.js"></script>
 </body>
 </html>
