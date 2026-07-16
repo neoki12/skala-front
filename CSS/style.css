@@ -128,8 +128,14 @@ main section h2 {
     padding-bottom: 8px;
 }
 
-aside {
+.sidebar-wrapper {
     flex: 3;
+    display: flex;
+    flex-direction: column; 
+    gap: 25px;             
+}
+
+aside {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 16px;
@@ -158,6 +164,48 @@ aside a {
 
 aside a:hover {
     text-decoration: underline;
+}
+
+.btn-game {
+    display: block;
+    width: 100%;
+    margin: 20px auto 10px;
+    background-color: #191f28; 
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-game:hover {
+    background-color: #333d4b;
+    transform: translateY(-2px);
+}
+
+.game-area {
+    display: none; 
+    margin-top: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e5e8eb;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.game-input {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #e5e8eb;
+    border-radius: 12px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
 }
 
 .intro-title {
@@ -253,8 +301,58 @@ dd {
     border-left: 4px solid #3182f6;
 }
 
+.profile-box {
+    background-color: #ffffff;   
+    padding: 30px;                
+    border-radius: 20px;         
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+    margin-bottom: 25px;           
+    border: 1px solid #f0f2f5;    
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #191f28;
+}
+
+.profile-box ul, 
+.profile-box dl {
+    margin: 0;
+    padding-left: 10px;
+}
+
 .holiday-container {
     max-width: 450px;
+}
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-list li {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.schedule-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.schedule-list input[type="checkbox"]:checked + label span {
+    text-decoration: line-through;
+    color: #a0aec0;
+    opacity: 0.7;
+}
+
+.schedule-list label {
+    cursor: pointer;
 }
 
 .header-title {
@@ -415,20 +513,61 @@ legend {
     margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="tel"],
-input[type="date"],
-select,
-textarea {
-    width: calc(100% - 130px);
-    max-width: 250px;
-    padding: 10px 12px;
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;            
+    padding: 12px;          
+    box-sizing: border-box; 
+    margin-top: 8px;     
     border: 1px solid #cbd5e0;
     border-radius: 8px;
-    font-size: 14px;
-    font-family: inherit;
-    transition: border-color 0.2s;
+    font-size: 15px;
+}
+
+.form-group label {
+    display: block;       
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;    
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;        
+    align-items: center;
+}
+
+.btn-verify {
+    margin-left: 10px;
+    padding: 12px 15px;
+    flex-shrink: 0;       
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.input-row input, .input-row select {
+    flex: 1; 
+}
+
+.btn-verify {
+    flex: 0 0 auto; 
+    padding: 12px 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -636,4 +775,51 @@ button {
     border-top: 1px solid #e5e8eb;
     color: #8b95a1;
     font-size: 13px;
+}
+
+.hub-header {
+    position: relative;      
+    padding: 50px 30px;     
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    background-color: #ffffff; 
+    overflow: hidden;       
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    text-align: center;
+}
+
+.hub-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../media/skala_logo.jpg');
+    
+    background-size: cover;     
+    background-position: center; 
+    opacity: 0.15;          
+    z-index: 0;          
+}
+
+.header-text {
+    position: relative;
+    z-index: 1;                 
+}
+
+.header-text h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #191f28;             
+}
+
+.header-text p {
+    margin: 0;
+    font-weight: bold;
+    color: #333d4b;
 }

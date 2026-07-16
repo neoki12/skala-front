@@ -9,7 +9,6 @@
 <body>
     
     <div class="signup-container">
-
         <header class="signup-header">
             <h2>👤 SKALA-FRONT 회원가입</h2>
             <p>환영합니다! 원활한 서비스 이용을 위해 정보를 입력해 주세요.</p>
@@ -19,19 +18,18 @@
             
             <fieldset class="form-section">
                 <legend>기본 계정 정보 (필수)</legend>
-                
                 <div class="form-group">
                     <label for="userId">아이디</label>
-                    <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 영문/숫자">
-                    <button type="button" class="btn-verify">중복확인</button>
+                    <div class="input-row">
+                        <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 영문/숫자">
+                        <button type="button" class="btn-verify">중복확인</button>
+                    </div>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="userPw">비밀번호</label>
-                    <input type="password" id="userPw" name="userPw" minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" required placeholder="비밀번호 입력"><br>
+                    <input type="password" id="userPw" name="userPw" minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" required placeholder="비밀번호 입력">
                     <small class="pw-hint">※ 필수: 영문 대/소문자, 숫자를 모두 포함 8자 이상</small>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="userPwConfirm">비밀번호 확인</label>
                     <input type="password" id="userPwConfirm" name="userPwConfirm" required placeholder="비밀번호 재입력">
@@ -40,85 +38,41 @@
 
             <fieldset class="form-section">
                 <legend>개인 정보 (필수)</legend>
-                
                 <div class="form-group">
                     <label for="userName">이름</label>
                     <input type="text" id="userName" name="userName" required placeholder="실명 입력">
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="userPhone">휴대전화</label>
-                    <input type="tel" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-0000-0000" required>
-                    <button type="button" class="btn-verify">인증번호</button>
+                    <div class="input-row">
+                        <input type="tel" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-0000-0000" required>
+                        <button type="button" class="btn-verify">인증번호</button>
+                    </div>
                 </div>
-                <br>
-                <div class="form-group email-group">
+                <div class="form-group">
                     <label for="userEmail">이메일</label>
-                    <input type="text" id="userEmail" name="userEmail" required placeholder="아이디">
-                    <span>@</span>
-                    <select name="emailDomain" id="emailDomain" required>
-                        <option value="" disabled selected>선택해주세요</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="naver.com">naver.com</option>
-                        <option value="daum.net">daum.net</option>
-                        <option value="kakao.com">kakao.com</option>
-                        <option value="direct">직접 입력</option>
-                    </select>
+                    <div class="input-row email-group">
+                        <input type="text" id="userEmail" name="userEmail" required placeholder="아이디">
+                        <span>@</span>
+                        <select name="emailDomain" id="emailDomain" required>
+                            <option value="" disabled selected>선택해주세요</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="direct">직접 입력</option>
+                        </select>
+                    </div>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="userBirth">생년월일</label>
                     <input type="date" id="userBirth" name="userBirth">
                 </div>
-                <br>
                 <div class="form-group">
                     <label>성별</label>
-                    <label><input type="radio" name="gender" value="male"> 남성</label>
-                    <label><input type="radio" name="gender" value="female"> 여성</label>
-                </div>
-            </fieldset>
-
-            <fieldset class="form-section">
-                <legend>관심 분야 및 소개 (선택)</legend>
-                
-                <div class="form-group">
-                    <label>희망 직무 분야 (중복 가능)</label>
-                    <div style="margin-top: 10px; line-height: 1.8;">
-                        <label><input type="checkbox" name="jobField" value="business"> 상경계열 (기획, 인사, 마케팅, 재무 등)</label><br>
-                        <label><input type="checkbox" name="jobField" value="science"> 이공계열 (IT개발, 연구개발, 엔지니어링 등)</label><br>
-                        <label><input type="checkbox" name="jobField" value="humanities"> 인문계열 (어문, 역사, 철학 등)</label><br>
-                        <label><input type="checkbox" name="jobField" value="society"> 사회계열 (사회, 심리, 행정 등)</label><br>
-                        <label><input type="checkbox" name="jobField" value="arts"> 예체능계열 (디자인, 영상, 스포츠, 예술 등)</label>
+                    <div class="input-row" style="justify-content: flex-start; gap: 20px;">
+                        <label><input type="radio" name="gender" value="male"> 남성</label>
+                        <label><input type="radio" name="gender" value="female"> 여성</label>
                     </div>
-                </div>
-
-                <div class="form-group" style="margin-top: 20px;">
-                    <label for="joinPath">가입 경로</label>
-                    <select id="joinPath" name="joinPath">
-                        <option value="" disabled selected>-- 선택해 주세요 --</option>
-                        <option value="search">인터넷 검색</option>
-                        <option value="friend">지인 추천</option>
-                        <option value="sns">SNS 광고</option>
-                        <option value="etc">기타</option>
-                    </select>
-                </div>
-
-                <div class="form-group" style="margin-top: 20px;">
-                    <label for="intro" style="width: 100%;">한 줄 자기소개</label>
-                    <textarea id="intro" name="intro" rows="3" placeholder="자신을 자유롭게 표현해 주세요 (최대 200자)" maxlength="200"></textarea>
-                </div>
-            </fieldset>
-
-            <fieldset class="form-section terms-section">
-                <legend>약관 동의</legend>
-                <div class="form-group" style="line-height: 1.8;">
-                    <label style="width: 100%;">
-                        <strong><input type="checkbox" id="agreeAll"> 전체 동의합니다.</strong>
-                    </label>
-                    <hr style="border-top: 1px dashed #cbd5e0; margin: 10px 0;">
-                    <label style="width: 100%;"><input type="checkbox" name="agreement" value="term1" required> (필수) 이용약관 동의</label><br>
-                    <label style="width: 100%;"><input type="checkbox" name="agreement" value="term2" required> (필수) 개인정보 수집 및 이용 동의</label><br>
-                    <label style="width: 100%;"><input type="checkbox" name="agreement" value="term3"> (선택) 마케팅 정보 수신 동의</label>
                 </div>
             </fieldset>
 
@@ -126,7 +80,6 @@
                 <button type="submit" class="btn-submit">회원가입 완료</button>
                 <button type="reset" class="btn-reset">다시 작성</button>
             </div>
-
         </form>
     </div>
 </body>
