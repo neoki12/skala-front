@@ -48,11 +48,18 @@
             <main>
                 <section>
                     <h2>📰 최근 소식 및 학습 기록</h2>
-                    <b>이번주 학습</b> <br><br>
+                    <b style="color: #1e90ff; font-weight: bold; font-size: 1.3rem; margin-bottom: 8px;">💻 이번주 학습</b> <br><br>
                     <b>💻 HTML:</b> 기본 구조를 잡고 시맨틱 태그(nav, main, aside)를 직접 적용해 보고 있습니다.<br>
                     <b>🎨 CSS:</b> 레이아웃을 잡기 위한 Flexbox 활용법, 박스 모델(padding, margin, border)을 이용한 디자인 시스템을 구축하고 있습니다.<br>
                     <b>⚡ JavaScript:</b> 웹 페이지의 핵심 동작을 제어하기 위해 OM API를 통해 요소를 조작하는 방법을 익히고 있으며, 
                     데이터 처리의 흐름을 이해하기 위해 Synchronous와 Asynchronous 처리 방식을 깊이 있게 공부 중입니다.
+
+                    <br><br>
+                    <b style="color: #10ac84; font-weight: bold; font-size: 1.3rem; margin-bottom: 8px;">🐍 다음주 학습</b><br><br>
+                    <b>🐍 Python:</b> 파이썬의 실행 구조(AST, 바이트코드)와 비동기/병렬 처리를 깊이 있게 이해하고, Pydantic 타입 힌팅, Ruff, pytest를 활용해 실무 수준의 코드 품질 관리 및 테스트 환경을 구축하는 방법을 학습할 예정입니다.<br>
+                    <b>📊 Data & Viz:</b> Pandas 2.x를 비롯해 대용량 데이터 처리에 특화된 Polars, DuckDB의 활용법을 익히고, Seaborn과 Plotly 등을 상황에 맞게 적용하여 분석 결과를 효과적으로 시각화하는 방법을 다룰 예정입니다.<br>
+                    <b>⚙️ Pipeline & Automation:</b> 기초 통계 검정부터 scikit-learn 파이프라인 구성까지 연결하고, 스케줄러(schedule)와 Jinja2를 활용한 분석 리포트 자동화 및 재현 가능한 프로젝트 구조화(모듈화) 방식을 학습할 예정입니다.
+
                     <p>앞으로 이곳에 데이터 분석 과정과 프론트엔드 학습 기록을 하나씩 채워나갈 예정입니다! </p>
                 </section>
 
@@ -70,6 +77,12 @@
                         <li><b>🏯 기요미즈데라:</b> 절벽 위에 세워진 거대한 목조 사찰로, 탁 트인 교토 시내 전경을 내려다볼 수 있습니다.</li>
                     </ul>
                 </section>
+
+                <section id="news-section">
+                    <h3>📰 오늘의 최신 뉴스</h3>
+                    <div id="news-box">로딩 중...</div>
+                </section>
+
             </main>
 
             <div class="sidebar-wrapper">
@@ -129,8 +142,45 @@
 
                     <hr>
                     <button onclick="showMyBag()" class="btn-game" style="margin-top: 10px; background-color: #95ee00;">🎒 내 가방 보기</button>
+                    <hr>
+
+                    <hr style="border: 0; border-top: 1px dashed #dcdde1; margin: 25px 0;">
+
+                    <section class="quote-container" style="text-align: center;">
+                        <h3 style="color: #2d3748; margin-bottom: 15px;">🥠 랜덤 명언 자판기</h3>
+                        
+                        <div style="background-color: #f1f2f6; padding: 20px; border-radius: 8px; margin-bottom: 15px; min-height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+                            <p id="quote-text" style="font-style: italic; color: #57606f; margin: 0; word-break: keep-all; line-height: 1.5;">
+                                "버튼을 눌러 오늘의 명언을 뽑아보세요!"
+                            </p>
+                        </div>
+                        
+                        <button id="quote-btn" class="game-btn">새 명언 뽑기 💡</button>
+                    </section>
 
                 </aside>
+
+                <aside class="game-aside" style="text-align: center; padding: 20px;">
+                    <h2>⭕ 틱택토 ❌</h2>
+                    
+                    <section class="tictactoe-container" style="margin-top: 15px;">
+                        <p id="tictactoe-status" style="font-weight: bold; margin-bottom: 15px;">X의 차례입니다!</p>                        
+                        <div class="board" id="tictactoe-board">
+                            <div class="cell" data-index="0"></div>
+                            <div class="cell" data-index="1"></div>
+                            <div class="cell" data-index="2"></div>
+                            <div class="cell" data-index="3"></div>
+                            <div class="cell" data-index="4"></div>
+                            <div class="cell" data-index="5"></div>
+                            <div class="cell" data-index="6"></div>
+                            <div class="cell" data-index="7"></div>
+                            <div class="cell" data-index="8"></div>
+                        </div>
+                        
+                        <button id="reset-btn" class="game-btn">게임 다시 시작</button>
+                    </section>
+                </aside>
+                <hr>
 
             </div>
 
@@ -140,9 +190,12 @@
 
     <script src="../script/weather.js" defer></script>
     <script src="../script/upDown.js"></script>
-    <script src="brick.js"></script>
+    <script src="../script/brick.js"></script>
     <script src="../script/grade.js"></script>
     <script src="../script/bag.js"></script>
     <script src="../script/time.js"></script>
+    <script src="../script/TicTacToe.js" defer></script>
+    <script src="../script/명언.js" defer></script>
+    <script src="../script/news.js" defer></script>
 </body>
 </html>

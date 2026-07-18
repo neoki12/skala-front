@@ -875,3 +875,116 @@ button {
 .schedule-list label span {
     color: inherit; 
 }
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; 
+    }
+}
+
+.info-aside, .game-aside {
+    transition: all 0.3s ease; 
+}
+.info-aside:hover, .game-aside:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+}
+
+.tictactoe-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
+    max-width: 220px;
+    margin: 0 auto 15px auto;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+    background-color: #dfe4ea;
+    transform: scale(0.98); 
+}
+
+.cell.x { color: #ff4757; }
+.cell.o { color: #1e90ff; }
+
+.game-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2f3640;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.game-btn:hover {
+    background-color: #718093;
+}
+
+.news-card {
+    text-align: left;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.news-card h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.news-card a {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+.news-error {
+    color: #e74c3c;
+    padding: 10px;
+    background-color: #fce4e4;
+    border-radius: 4px;
+}
