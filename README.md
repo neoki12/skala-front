@@ -162,6 +162,7 @@
 ---
 
 <img width="1350" height="2322" alt="127 0 0 1_5500_html_signUp html" src="https://github.com/user-attachments/assets/1f0f5467-9e39-4f15-832a-98d9f75ad39a" />
+<img width="502" height="850" alt="image" src="https://github.com/user-attachments/assets/d98d81f3-fb35-492a-97f6-fb10826143c5" />
 
 
 ## ⚙️ JavaScript 핵심 기능 및 문법 (API & 동적 제어)
