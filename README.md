@@ -213,10 +213,6 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
       }
   }
   ```
-<img width="315" height="181" alt="image" src="https://github.com/user-attachments/assets/17455695-b63d-4e47-a9af-5332c02b7e4a" />
-  <img width="256" height="329" alt="image" src="https://github.com/user-attachments/assets/bc11196f-1d89-46e0-95dc-6e030a1ce59d" />
-<img width="692" height="797" alt="image" src="https://github.com/user-attachments/assets/9185c7eb-57a8-48f7-8b6b-7a28639b0787" />
-
 
 * **템플릿 리터럴과 배열 순회 (`news.js`)**
   받아온 배열 데이터를 `slice`로 자르고 `forEach`로 순회하며 동적으로 HTML 요소를 생성합니다.
@@ -233,6 +229,11 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
       `;
   });
   ```
+
+<img width="313" height="262" alt="image" src="https://github.com/user-attachments/assets/77562ac2-e256-473c-bfd6-2ec78b36fb2a" />
+<img width="256" height="329" alt="image" src="https://github.com/user-attachments/assets/bc11196f-1d89-46e0-95dc-6e030a1ce59d" />
+<img width="692" height="797" alt="image" src="https://github.com/user-attachments/assets/9185c7eb-57a8-48f7-8b6b-7a28639b0787" />
+
 
 ### 3. ⭕ 틱택토 ❌ (`TicTacToe.js`)
 사용자의 클릭 이벤트를 감지하고 게임의 승패 로직(알고리즘)을 판단합니다.
@@ -254,6 +255,8 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   cells.forEach(cell => cell.addEventListener('click', handleCellClick));
   ```
 
+<img width="311" height="524" alt="image" src="https://github.com/user-attachments/assets/95df2473-dcf1-4fb8-a638-e0baa4245dcf" />
+
 ### 4. ⏰ 실시간 디지털 시계 (`time.js`)
 자바스크립트의 내장 `Date` 객체와 타이머 함수를 활용했습니다.
 
@@ -273,6 +276,8 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
 
   setInterval(updateClock, 1000); // 1000ms(1초)마다 updateClock 함수 반복 실행
   ```
+  
+<img width="315" height="181" alt="image" src="https://github.com/user-attachments/assets/17455695-b63d-4e47-a9af-5332c02b7e4a" />
 
 ### 5. 📊 성적 분포 분석기 (`grade.js`)
 브라우저 내장 대화상자를 이용해 데이터를 입력받고 통계 연산을 수행합니다.
