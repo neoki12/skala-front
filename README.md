@@ -34,6 +34,8 @@
       flex-direction: column; /* 사이드바 내부 요소들은 세로(위에서 아래)로 정렬 */
   }
   ```
+  <img width="1350" height="3088" alt="127 0 0 1_5500_html_index html" src="https://github.com/user-attachments/assets/95087293-4739-4db0-90c8-a3b90fca50c9" />
+
 
 ### 2. 👤 나의 프로필 (`myProfile.html`) - 인터랙티브 UI와 목록 태그
 : JS 없이 HTML 태그만으로 열고 닫히는 UI를 만들고, 다양한 리스트 태그를 적용했습니다
@@ -57,6 +59,8 @@
       <dd>맨땅에 헤딩하는 것을 두려워하지 않는...</dd> <!-- 설명 (Description) -->
   </dl>
   ```
+<img width="1350" height="2131" alt="127 0 0 1_5500_html_myProfile html" src="https://github.com/user-attachments/assets/11d5ca80-aa97-4295-a8cd-a2e4356a6f6c" />
+
 
 ### 3. 📅 나의 수업 (`myClass.html`) - 2차원 테이블(표) 설계
 일주일 간의 시간표를 만들기 위해 테이블 태그의 병합 속성을 적극 활용했습니다.
@@ -79,6 +83,8 @@
       background-color: #fcfcfc; /* 표의 행에 마우스를 올렸을 때 배경색 변경 (가독성 향상) */
   }
   ```
+
+  <img width="1350" height="1049" alt="127 0 0 1_5500_html_myClass html" src="https://github.com/user-attachments/assets/ef6ae7f8-6399-4a3d-a2d1-1b64401de3ca" />
 
 ### 4. 🏖️ 나의 휴일 (`myHoliday.html`) - 상태 선택자 기반 애니메이션
 체크박스 클릭 상태에 따라 인접한 텍스트의 디자인이 바뀌는 '체크리스트'를 구현했습니다.
@@ -131,6 +137,9 @@
   </video>
   ```
 
+  <img width="1350" height="1105" alt="127 0 0 1_5500_html_myHoliday html" src="https://github.com/user-attachments/assets/f3d22e87-b02c-418d-9c6e-9dd60cafb583" />
+
+
 ### 6. 📝 회원가입 (`signUp.html`) - 폼 유효성 검사
 클라이언트(브라우저) 단에서 입력 데이터의 형식을 검사하는 HTML5 문법을 적용했습니다.
 
@@ -151,6 +160,9 @@
   ```
 
 ---
+
+<img width="1350" height="2322" alt="127 0 0 1_5500_html_signUp html" src="https://github.com/user-attachments/assets/1f0f5467-9e39-4f15-832a-98d9f75ad39a" />
+
 
 ## ⚙️ JavaScript 핵심 기능 및 문법 (API & 동적 제어)
 
