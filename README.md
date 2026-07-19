@@ -131,7 +131,7 @@
   </video>
   ```
 
-### 6. 📝 회원가입 (`signUp.html`) - 폼(Form) 유효성 검사
+### 6. 📝 회원가입 (`signUp.html`) - 폼 유효성 검사
 클라이언트(브라우저) 단에서 입력 데이터의 형식을 검사하는 HTML5 문법을 적용했습니다.
 
 * **정규식(RegEx) 및 속성을 활용한 제약 조건**
@@ -152,9 +152,128 @@
 
 ---
 
-## 🎮 JavaScript (Vanilla JS) 주요 문법
+## ⚙️ JavaScript 핵심 기능 및 문법 (API & 동적 제어)
 
-### 🎒 내 가방 보기 (`bag.js`)
+### 1. 🧱 벽돌 깨기 게임 (`brick.js`)[cite: 11]
+HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 루프를 구현했습니다[cite: 11].
+
+* **Canvas 렌더링 및 애니메이션 루프**[cite: 11]
+  `requestAnimationFrame`을 사용하여 브라우저 주사율에 맞춰 부드럽게 화면을 반복해서 다시 그립니다.
+  ```javascript
+  const canvas = document.getElementById("gameCanvas");
+  const ctx = canvas.getContext("2d"); // 2D 렌더링 컨텍스트 가져오기
+
+  function draw() {
+      if (isGameOver) return; // 게임 종료 시 루프 중단
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // 이전 프레임 지우기
+      drawBricks(); // 벽돌 그리기
+      drawBall();   // 공 그리기
+      drawPaddle(); // 패들 그리기
+      
+      requestAnimationFrame(draw); // 다음 프레임 호출 (무한 루프)
+  }
+  ```
+
+### 2. 🌍 비동기 API 통신: 날씨, 명언, 뉴스 (`weather.js`, `명언.js`, `news.js`)[cite: 13, 14, 15]
+외부 서버(OpenWeatherMap, Advice Slip, NewsAPI)에서 실시간 데이터를 받아와 화면에 렌더링합니다[cite: 13, 14, 15].
+
+* **`async / await` 및 `fetch` API**[cite: 13, 14, 15]
+  비동기 통신을 동기적인 코드 흐름처럼 직관적으로 작성하고, `try...catch`로 에러를 제어합니다.
+  ```javascript
+  async function fetchRandomQuote() {
+      try {
+          // API 서버에 요청을 보내고 응답을 기다림
+          const response = await fetch('[https://api.adviceslip.com/advice](https://api.adviceslip.com/advice)');
+          
+          if (!response.ok) throw new Error("서버 상태가 불안정합니다.");
+          
+          // JSON 데이터를 자바스크립트 객체로 변환
+          const data = await response.json(); 
+          
+          // DOM 업데이트
+          quoteText.innerHTML = `"${data.slip.advice}"`; 
+      } catch (error) {
+          console.error("에러 발생:", error);
+      } finally {
+          // 성공, 실패 여부와 상관없이 마지막에 항상 실행
+          quoteBtn.disabled = false; 
+      }
+  }
+  ```
+
+* **템플릿 리터럴과 배열 순회 (`news.js`)**[cite: 15]
+  받아온 배열 데이터를 `slice`로 자르고 `forEach`로 순회하며 동적으로 HTML 요소를 생성합니다.
+  ```javascript
+  const topArticles = data.articles.slice(0, 3); // 상위 3개 기사만 추출
+
+  topArticles.forEach(article => {
+      // 백틱(`)을 사용해 HTML 태그와 변수(${...})를 직관적으로 결합
+      newsContainer.innerHTML += `
+          <div class="news-card">
+              <h4>${article.title}</h4>
+              <p>${article.description}</p>
+          </div>
+      `;
+  });
+  ```
+
+### 3. ⭕ 틱택토 ❌ (`TicTacToe.js`)[cite: 16]
+사용자의 클릭 이벤트를 감지하고 게임의 승패 로직(알고리즘)을 판단합니다[cite: 16].
+
+* **이벤트 위임과 배열 상태 관리**[cite: 16]
+  배열과 다차원 배열을 활용해 게임판의 상태와 승리 조건을 정의했습니다.
+  ```javascript
+  // 1차원 배열로 9칸의 상태 관리
+  let board = ['', '', '', '', '', '', '', '', '']; 
+  
+  // 승리 가능한 모든 인덱스 조합 (가로, 세로, 대각선)
+  const winningConditions = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+      [0, 4, 8], [2, 4, 6]          
+  ];
+
+  // 각 셀에 클릭 이벤트 리스너 부착
+  cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+  ```
+
+### 4. ⏰ 실시간 디지털 시계 (`time.js`)[cite: 17]
+자바스크립트의 내장 `Date` 객체와 타이머 함수를 활용했습니다[cite: 17].
+
+* **`setInterval`과 문자열 패딩 (`padStart`)**[cite: 17]
+  1초마다 시계를 업데이트하고, 숫자가 1자리일 경우 앞에 '0'을 채워 시각적인 안정감을 줍니다.
+  ```javascript
+  function updateClock() {
+      const now = new Date(); // 현재 시간 객체 생성
+      
+      // padStart(2, '0'): 문자열 길이를 2로 맞추고 빈 공간은 '0'으로 채움 (예: 9 -> 09)
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      document.getElementById('live-clock').innerText = `${hours}:${minutes}:${seconds}`;
+  }
+
+  setInterval(updateClock, 1000); // 1000ms(1초)마다 updateClock 함수 반복 실행
+  ```
+
+### 5. 📊 성적 분포 분석기 (`grade.js`)[cite: 12]
+브라우저 내장 대화상자를 이용해 데이터를 입력받고 통계 연산을 수행합니다[cite: 12].
+
+* **내장 대화상자 및 형변환**[cite: 12]
+  ```javascript
+  // prompt로 입력받은 값은 문자열이므로 Number()로 형변환
+  var totalPeople = Number(prompt("전체 인원수를 입력하세요.")); 
+  
+  // 확인/취소 버튼이 있는 대화상자 (boolean 반환)
+  var doMore = confirm("등수 확인을 진행하시겠습니까?"); 
+  ```
+* **내장 `Math` 객체 활용**[cite: 12]
+  `Math.round()`(반올림), `Math.max()`, `Math.min()`(최댓값/최솟값 보정) 등을 사용해 통계 수치를 계산했습니다.
+
+  
+### 6. 🎒 내 가방 보기 (`bag.js`)
 복합 데이터(배열과 객체)를 다루고 반복문을 통해 데이터를 처리하는 로직입니다.
 
 * **배열(Array) 내부의 객체(Object) 선언**
