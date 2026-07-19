@@ -154,10 +154,10 @@
 
 ## ⚙️ JavaScript 핵심 기능 및 문법 (API & 동적 제어)
 
-### 1. 🧱 벽돌 깨기 게임 (`brick.js`)[cite: 11]
-HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 루프를 구현했습니다[cite: 11].
+### 1. 🧱 벽돌 깨기 게임 (`brick.js`
+HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 루프를 구현했습니다.
 
-* **Canvas 렌더링 및 애니메이션 루프**[cite: 11]
+* **Canvas 렌더링 및 애니메이션 루프**
   `requestAnimationFrame`을 사용하여 브라우저 주사율에 맞춰 부드럽게 화면을 반복해서 다시 그립니다.
   ```javascript
   const canvas = document.getElementById("gameCanvas");
@@ -175,10 +175,10 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   }
   ```
 
-### 2. 🌍 비동기 API 통신: 날씨, 명언, 뉴스 (`weather.js`, `명언.js`, `news.js`)[cite: 13, 14, 15]
-외부 서버(OpenWeatherMap, Advice Slip, NewsAPI)에서 실시간 데이터를 받아와 화면에 렌더링합니다[cite: 13, 14, 15].
+### 2. 🌍 비동기 API 통신: 날씨, 명언, 뉴스 (`weather.js`, `명언.js`, `news.js`)
+외부 서버(OpenWeatherMap, Advice Slip, NewsAPI)에서 실시간 데이터를 받아와 화면에 렌더링합니다.
 
-* **`async / await` 및 `fetch` API**[cite: 13, 14, 15]
+* **`async / await` 및 `fetch` API**
   비동기 통신을 동기적인 코드 흐름처럼 직관적으로 작성하고, `try...catch`로 에러를 제어합니다.
   ```javascript
   async function fetchRandomQuote() {
@@ -202,7 +202,7 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   }
   ```
 
-* **템플릿 리터럴과 배열 순회 (`news.js`)**[cite: 15]
+* **템플릿 리터럴과 배열 순회 (`news.js`)**
   받아온 배열 데이터를 `slice`로 자르고 `forEach`로 순회하며 동적으로 HTML 요소를 생성합니다.
   ```javascript
   const topArticles = data.articles.slice(0, 3); // 상위 3개 기사만 추출
@@ -218,10 +218,10 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   });
   ```
 
-### 3. ⭕ 틱택토 ❌ (`TicTacToe.js`)[cite: 16]
-사용자의 클릭 이벤트를 감지하고 게임의 승패 로직(알고리즘)을 판단합니다[cite: 16].
+### 3. ⭕ 틱택토 ❌ (`TicTacToe.js`)
+사용자의 클릭 이벤트를 감지하고 게임의 승패 로직(알고리즘)을 판단합니다.
 
-* **이벤트 위임과 배열 상태 관리**[cite: 16]
+* **이벤트 위임과 배열 상태 관리**
   배열과 다차원 배열을 활용해 게임판의 상태와 승리 조건을 정의했습니다.
   ```javascript
   // 1차원 배열로 9칸의 상태 관리
@@ -238,10 +238,10 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   cells.forEach(cell => cell.addEventListener('click', handleCellClick));
   ```
 
-### 4. ⏰ 실시간 디지털 시계 (`time.js`)[cite: 17]
-자바스크립트의 내장 `Date` 객체와 타이머 함수를 활용했습니다[cite: 17].
+### 4. ⏰ 실시간 디지털 시계 (`time.js`)
+자바스크립트의 내장 `Date` 객체와 타이머 함수를 활용했습니다.
 
-* **`setInterval`과 문자열 패딩 (`padStart`)**[cite: 17]
+* **`setInterval`과 문자열 패딩 (`padStart`)**
   1초마다 시계를 업데이트하고, 숫자가 1자리일 경우 앞에 '0'을 채워 시각적인 안정감을 줍니다.
   ```javascript
   function updateClock() {
@@ -258,10 +258,10 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   setInterval(updateClock, 1000); // 1000ms(1초)마다 updateClock 함수 반복 실행
   ```
 
-### 5. 📊 성적 분포 분석기 (`grade.js`)[cite: 12]
-브라우저 내장 대화상자를 이용해 데이터를 입력받고 통계 연산을 수행합니다[cite: 12].
+### 5. 📊 성적 분포 분석기 (`grade.js`)
+브라우저 내장 대화상자를 이용해 데이터를 입력받고 통계 연산을 수행합니다.
 
-* **내장 대화상자 및 형변환**[cite: 12]
+* **내장 대화상자 및 형변환**
   ```javascript
   // prompt로 입력받은 값은 문자열이므로 Number()로 형변환
   var totalPeople = Number(prompt("전체 인원수를 입력하세요.")); 
@@ -269,7 +269,7 @@ HTML5 `<canvas>` API를 활용하여 객체를 그리고 움직이는 2D 게임 
   // 확인/취소 버튼이 있는 대화상자 (boolean 반환)
   var doMore = confirm("등수 확인을 진행하시겠습니까?"); 
   ```
-* **내장 `Math` 객체 활용**[cite: 12]
+* **내장 `Math` 객체 활용**
   `Math.round()`(반올림), `Math.max()`, `Math.min()`(최댓값/최솟값 보정) 등을 사용해 통계 수치를 계산했습니다.
 
   
